@@ -11,8 +11,8 @@ MySQL database mooc_platform on localhost and installed [sqlclient for python](h
 11/05:
 Created 4 basic app:users, organization, courses, operation. operation is in the higher level that could import other apps .<br>
 11/07:
-Finished models.py in users and courses.<br>
+Finished models.py in user and course.<br>
 11/15:
-Finished models.py in organization <br>
+Finished models.py in organization and operaton. <br>
 11/24:
-Setting up using [Xadmin](https://github.com/sshwsfc/xadmin)
+Setting up using [Xadmin](https://github.com/sshwsfc/xadmin) instead of default admin in Django
