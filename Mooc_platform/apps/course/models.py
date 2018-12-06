@@ -22,8 +22,8 @@ class Course(models.Model):
 
 
 class Lesson(models.Model):
-    course= models.ForeignKey(Course, verbose_name="course")
-    name=models.ForeignKey(max_length=100, verbose_name="lesson name")
+    course= models.ForeignKey(Course, verbose_name="course",on_delete=models.CASCADE)
+    name=models.CharField(max_length=100, verbose_name="lesson name")
     add_time=models.DateTimeField(default=datetime.now,verbose_name="add time")
 
     class Meta:
@@ -32,8 +32,8 @@ class Lesson(models.Model):
 
 
 class Video(models.Model):
-    lesson = models.ForeignKey(Course, verbose_name="lesson")
-    name=models.ForeignKey(max_length=100, verbose_name="video name")
+    lesson = models.ForeignKey(Course, verbose_name="lesson",on_delete=models.CASCADE)
+    name=models.CharField(max_length=100, verbose_name="video name")
     add_time=models.DateTimeField(default=datetime.now,verbose_name="add time")
 
 
@@ -43,8 +43,8 @@ class Video(models.Model):
 
 
 class CourseResource(models.Model):
-    course=models.ForeignKey(Course, verbose_name="course")
-    name=models.ForeignKey(max_length=100, verbose_name="course resource name")
+    course=models.ForeignKey(Course, verbose_name="course",on_delete=models.CASCADE)
+    name=models.CharField(max_length=100, verbose_name="course resource name")
     download=models.FileField(upload_to="courses/resources/%Y/%m",verbose_name="resource file",max_length=100)
     add_time=models.DateTimeField(default=datetime.now,verbose_name="add time")
 
