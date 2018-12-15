@@ -1,7 +1,413 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22317c29-4ada-4ba9-ab3b-6d9e1d0c7e87" name="Default Changelist" comment="" />
+    <list default="true" id="22317c29-4ada-4ba9-ab3b-6d9e1d0c7e87" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/course/adminx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/course/migrations/0002_auto_20181214_1753.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/operation/adminx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/organization/adminx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/organization/migrations/0002_auto_20181214_1759.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/organization/migrations/0003_auto_20181214_1759.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/organization/migrations/0004_auto_20181214_1803.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/user/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Mooc_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Mooc_platform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mooc_platform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mooc_platform/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/course/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/course/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/course/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/course/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operation/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operation/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operation/migrations/0002_auto_20181202_2304.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operation/migrations/0002_auto_20181214_1744.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operation/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operation/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/organization/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organization/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/organization/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organization/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/xadmin/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_apps/xadmin/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/xadmin/migrations/0002_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/xadmin/migrations/0003_auto_20160715_0100.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin-2.0.1.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin-2.0.1.dist-info/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin-2.0.1.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin-2.0.1.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin-2.0.1.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin-2.0.1.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/adminx.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/filters.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/layout.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/de_DE/LC_MESSAGES/django.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/de_DE/LC_MESSAGES/django.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/de_DE/LC_MESSAGES/djangojs.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/de_DE/LC_MESSAGES/djangojs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/en/LC_MESSAGES/django.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/en/LC_MESSAGES/django.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/en/LC_MESSAGES/djangojs.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/en/LC_MESSAGES/djangojs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/es_MX/LC_MESSAGES/django.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/es_MX/LC_MESSAGES/django.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/es_MX/LC_MESSAGES/djangojs.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/es_MX/LC_MESSAGES/djangojs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/eu/LC_MESSAGES/django.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/eu/LC_MESSAGES/django.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/eu/LC_MESSAGES/djangojs.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/eu/LC_MESSAGES/djangojs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/id_ID/LC_MESSAGES/django.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/id_ID/LC_MESSAGES/django.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/id_ID/LC_MESSAGES/djangojs.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/id_ID/LC_MESSAGES/djangojs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/ja/LC_MESSAGES/django.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/ja/LC_MESSAGES/django.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/ja/LC_MESSAGES/djangojs.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/ja/LC_MESSAGES/djangojs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/lt/LC_MESSAGES/django.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/lt/LC_MESSAGES/django.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/lt/LC_MESSAGES/djangojs.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/lt/LC_MESSAGES/djangojs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/nl_NL/LC_MESSAGES/django.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/nl_NL/LC_MESSAGES/django.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/pl/LC_MESSAGES/django.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/pl/LC_MESSAGES/django.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/pl/LC_MESSAGES/djangojs.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/pl/LC_MESSAGES/djangojs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/pt_BR/LC_MESSAGES/django.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/pt_BR/LC_MESSAGES/django.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/ru_RU/LC_MESSAGES/django.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/ru_RU/LC_MESSAGES/django.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/zh_Hans/LC_MESSAGES/django.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/zh_Hans/LC_MESSAGES/django.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/migrations/0002_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/migrations/0003_auto_20160715_0100.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/actions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/aggregation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/ajax.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/auth.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/batch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/bookmark.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/chart.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/comments.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/details.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/editable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/export.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/filters.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/images.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/importexport.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/inline.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/language.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/layout.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/mobile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/multiselect.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/passwords.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/portal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/quickfilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/quickform.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/refresh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/relate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/relfield.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/sitemenu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/sortablelist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/themes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/topnav.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/wizard.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/plugins/xversion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/sites.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/themes/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/themes/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/themes/bootstrap-xadmin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/xadmin.form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/xadmin.main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/xadmin.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/xadmin.page.dashboard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/xadmin.plugin.aggregation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/xadmin.plugin.formset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/xadmin.plugin.importexport.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/xadmin.plugin.quickfilter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/xadmin.plugins.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/xadmin.responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/xadmin.widget.editable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/css/xadmin.widget.select-transfer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.page.dashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.page.form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.page.list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.batch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.bookmark.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.charts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.details.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.editable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.filters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.formset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.importexport.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.portal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.quick-form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.quickfilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.refresh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.revision.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.sortablelist.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.plugin.themes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.responsive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.widget.datetime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.widget.multiselect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.widget.select-transfer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/js/xadmin.widget.select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/autotype/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs-latin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-image-gallery/img/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-modal/css/bootstrap-modal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-modal/img/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modalmanager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-multiselect/js/bootstrap-multiselect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/excanvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/excanvas.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.colorhelpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.aggregate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.categories.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.crosshair.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.errorbars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.fillbetween.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.navigate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.pie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.resize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.selection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.stack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.symbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.threshold.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/flot/jquery.flot.time.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/load-image/load-image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/load-image/load-image.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2-spinner.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_pt-BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_pt-PT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_ua.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2_locale_zh-hans.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/select2/select2x2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/selectize/selectize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/selectize/selectize.default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/selectize/selectize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/selectize/selectize.legacy.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/selectize/selectize.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/snapjs/snap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/snapjs/snap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/static/xadmin/vendor/snapjs/snap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/auth/password_reset/complete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/auth/password_reset/confirm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/auth/password_reset/done.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/auth/password_reset/email.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/auth/password_reset/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/auth/user/add_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/auth/user/change_password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/base_site.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/comm.top.setlang.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/comm.top.theme.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/comm.top.topnav.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/modal_list.left_navbar.quickfilter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_form.before_fieldsets.wizard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_list.nav_form.search_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_list.nav_menu.filters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_list.results_bottom.actions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_list.results_top.charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_list.results_top.date_hierarchy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.export.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.import.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.layouts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.refresh.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.saveorder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/edit_inline/accordion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/edit_inline/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/edit_inline/blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/edit_inline/one.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/edit_inline/stacked.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/edit_inline/tab.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/edit_inline/tabular.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/filters/char.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/filters/checklist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/filters/date.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/filters/fk_search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/filters/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/filters/number.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/filters/quickfilter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/filters/rel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/forms/transfer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/grids/thumbnails.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/import_export/export_action.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/import_export/import.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/includes/box.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/includes/pagination.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/includes/sitemenu_accordion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/includes/sitemenu_default.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/includes/submit_line.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/includes/toggle_back.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/includes/toggle_menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/layout/field_value.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/layout/field_value_td.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/layout/fieldset.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/layout/input_group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/layout/td-field.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/app_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/batch_change_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/invalid_setup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/logged_out.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/model_dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/model_delete_confirm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/model_delete_selected_confirm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/model_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/model_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/model_history.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/model_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/quick_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/quick_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/recover_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/recover_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/revision_diff.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/views/revision_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/widgets/addform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/widgets/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/widgets/chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/widgets/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templates/xadmin/widgets/qbutton.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templatetags/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/templatetags/xadmin_tags.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/vendors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/views/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/views/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/views/dashboard.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/views/delete.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/views/detail.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/views/edit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/views/form.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/views/list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/views/website.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_env/Lib/site-packages/xadmin/widgets.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,93 +433,62 @@
     <session id="1491782901">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="8" />
-          <entry key="project.open.time.4" value="5" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.open.time.3" value="11" />
+          <entry key="project.open.time.4" value="6" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Django Console" value="5" />
-          <entry key="py" value="4894" />
-          <entry key="py@Mooc_platform" value="307" />
+          <entry key="py" value="6381" />
+          <entry key="py@Mooc_platform" value="446" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CommandLine" value="272" />
-          <entry key="PLAIN_TEXT" value="35" />
-          <entry key="Python" value="4899" />
+          <entry key="CommandLine" value="374" />
+          <entry key="PLAIN_TEXT" value="72" />
+          <entry key="Python" value="6386" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="45" />
+          <entry key="Python" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="45" />
+          <entry key="py" value="85" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Mooc_platform" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Mooc_platform/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-              <folding>
-                <element signature="e#314#323#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mooc_platform/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-              <folding>
-                <element signature="e#637#669#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/user/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/user/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+            <state relative-caret-position="690">
+              <caret line="41" column="71" selection-start-line="41" selection-start-column="71" selection-end-line="41" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/user/adminx.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -141,9 +516,18 @@
         <option value="$PROJECT_DIR$/course/models.py" />
         <option value="$PROJECT_DIR$/operation/models.py" />
         <option value="$PROJECT_DIR$/organization/models.py" />
-        <option value="$PROJECT_DIR$/Mooc_platform/urls.py" />
         <option value="$PROJECT_DIR$/apps/user/admin.py" />
+        <option value="$PROJECT_DIR$/Mooc_platform/urls.py" />
+        <option value="$PROJECT_DIR$/apps/user/models.py" />
+        <option value="$PROJECT_DIR$/apps/course/models.py" />
+        <option value="$PROJECT_DIR$/apps/course/adminx.py" />
+        <option value="$PROJECT_DIR$/apps/organization/adminx.py" />
+        <option value="$PROJECT_DIR$/apps/organization/models.py" />
         <option value="$PROJECT_DIR$/Mooc_platform/settings.py" />
+        <option value="$PROJECT_DIR$/apps/operation/models.py" />
+        <option value="$PROJECT_DIR$/apps/operation/adminx.py" />
+        <option value="$PROJECT_DIR$/apps/adminx.py" />
+        <option value="$PROJECT_DIR$/apps/user/adminx.py" />
       </list>
     </option>
   </component>
@@ -165,7 +549,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,12 +559,24 @@
             <path>
               <item name="Mooc_platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mooc_platform" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mooc_platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mooc_platform" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mooc_platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mooc_platform" type="462c0819:PsiDirectoryNode" />
               <item name="Mooc_platform" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,6 +588,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Yuel\Envs\Mooc_platform\extra_apps" />
       <recent name="C:\Users\Yuel\Envs\Mooc_platform" />
       <recent name="C:\Users\Yuel\Envs\Mooc_platform\apps" />
     </key>
@@ -295,9 +691,9 @@
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5495495" visible="true" weight="0.2892108" />
-      <window_info id="Structure" order="1" sideWeight="0.45045045" side_tool="true" weight="0.27422577" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.548048" visible="true" weight="0.3011988" />
+      <window_info id="Structure" order="1" sideWeight="0.45195195" side_tool="true" weight="0.3011988" />
+      <window_info id="Favorites" order="2" sideWeight="0.45195195" side_tool="true" weight="0.3011988" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32930514" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4995005" weight="0.32930514" />
@@ -309,7 +705,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004995" side_tool="true" weight="0.32930514" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32930514" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32930514" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32930514" />
       <window_info anchor="bottom" id="manage.py@Mooc_platform" order="13" weight="0.32930514" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.32930514" />
@@ -319,30 +715,6 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5495495" visible="true" weight="0.27422577" />
-      <window_info id="Structure" order="1" sideWeight="0.45045045" side_tool="true" visible="true" weight="0.27422577" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32930514" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4995005" weight="0.32930514" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004995" side_tool="true" weight="0.32930514" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="manage.py@Mooc_platform" order="13" visible="true" weight="0.32930514" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -365,68 +737,25 @@
     <entry file="file://$PROJECT_DIR$/apps/user/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mooc_platform/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/course/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/course/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/course/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/course/views.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/course/migrations/__init__.py" />
     <entry file="file://$PROJECT_DIR$/apps/operation/migrations/0002_auto_20181202_2244.py" />
-    <entry file="file://$PROJECT_DIR$/apps/course/migrations/0001_initial.py" />
     <entry file="file://$PROJECT_DIR$/apps/operation/migrations/0001_initial.py" />
     <entry file="file://$PROJECT_DIR$/apps/course/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/operation/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/course/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="45" column="83" selection-start-line="45" selection-start-column="83" selection-end-line="45" selection-end-column="83" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/apps/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/organization/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mooc_platform/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-          <folding>
-            <element signature="e#314#323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mooc_platform/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding>
-            <element signature="e#637#669#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Mooc_platform/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/user/admin.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -435,18 +764,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/user/models.py">
+    <entry file="file://$PROJECT_DIR$/Mooc_platform/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        <state relative-caret-position="456">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
+    <entry file="file://$PROJECT_DIR$/../django_env/Lib/site-packages/pytz/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3864">
+          <caret line="177" selection-start-line="177" selection-end-line="177" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/course/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/__init__.py">
+    <entry file="file://$PROJECT_DIR$/apps/course/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/course/migrations/0002_auto_20181214_1714.py" />
+    <entry file="file://$PROJECT_DIR$/apps/course/migrations/0001_initial.py" />
+    <entry file="file://$PROJECT_DIR$/apps/course/migrations/0003_auto_20181214_1719.py" />
+    <entry file="file://$PROJECT_DIR$/apps/course/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/course/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/course/adminx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1544838940091" expanded="true" signature="794:959" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mooc_platform/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="906">
+          <caret line="125" column="14" selection-start-line="125" selection-start-column="14" selection-end-line="125" selection-end-column="14" />
+          <folding>
+            <element signature="e#314#323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/organization/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/organization/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/organization/adminx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/operation/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/operation/adminx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <marker date="1544840199344" expanded="true" signature="337:698" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/adminx.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="41" column="71" selection-start-line="41" selection-start-column="71" selection-end-line="41" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/adminx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

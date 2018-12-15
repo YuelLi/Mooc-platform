@@ -23,8 +23,8 @@ class CourseComment(models.Model):
     add_time=models.DateTimeField(default=datetime.now,verbose_name="add time")
 
     class Meta:
-        verbose_name="course comment"
-        verbose_name_plural="course comments"
+        verbose_name="Course Comment"
+        verbose_name_plural="Course Comments"
 
 class UserFavorite(models.Model):
     user = models.ForeignKey(UserProfile, verbose_name="User", on_delete=models.CASCADE)

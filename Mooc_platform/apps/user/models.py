@@ -22,21 +22,24 @@ class UserProfile(AbstractUser):
 
 
 class EmailVerifyRecord(models.Model):
-    code = models.CharField(max_length=20,verbose_name="verification code")
-    email = models.EmailField(max_length=50, verbose_name="email address")
-    send_type=models.CharField(choices=(("reg","register"),("for","forget")),max_length=5)
-    send_time=models.DateTimeField(default=datetime.now)
+    code = models.CharField(max_length=20,verbose_name="Verification code")
+    email = models.EmailField(max_length=50, verbose_name="Email address")
+    send_type=models.CharField(choices=(("reg","Register"),("for","Forget password")),max_length=5,verbose_name="Type")
+    send_time=models.DateTimeField(default=datetime.now,verbose_name="Time")
 
     class Meta:
-        verbose_name= "verification code"
-        verbose_name_plural="verification codes"
+        verbose_name= "Email verification"
+        verbose_name_plural=verbose_name
+
+    def __str__(self):
+        return '{0}({1})'.format(self.code,self.email)
 
 class Banner(models.Model):
-    title =models.CharField(max_length=100, verbose_name="title")
-    image =models.ImageField(upload_to="banner/%Y/%m",verbose_name="banner pictures",max_length=100)
-    url= models.URLField(max_length=200, verbose_name="url to visit")
+    title =models.CharField(max_length=100, verbose_name="Title")
+    image =models.ImageField(upload_to="banner/%Y/%m",verbose_name="Image",max_length=100)
+    url= models.URLField(max_length=200, verbose_name="Url")
     index=models.IntegerField(default=100)
-    add_time=models.DateTimeField(default=datetime.now, verbose_name="add time")
+    add_time=models.DateTimeField(default=datetime.now, verbose_name="Time")
 
     class Meta:
         verbose_name= "banner"
