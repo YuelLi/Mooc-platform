@@ -14,8 +14,10 @@ Created 4 basic app:users, organization, courses, operation. operation is in the
 Finished models.py in user and course. Started doing HTML/CSS files<br>
 11/15:<br>
 Finished models.py in organization and operaton. <br>
-Found HTML/CSS resources online. Started JS parts.
+Found HTML/CSS templates online. <br>
 11/24:<br>
 Setting up using [xadmin](https://github.com/sshwsfc/xadmin) instead of default admin in Django<br>
+Started JS parts.<br>
+Finished index.html and login.html<br>
 12/2:<br>
 Finshing up xadmin Configuration on created models.
