@@ -11,8 +11,7 @@ MySQL database mooc_platform on localhost and installed [sqlclient for python](h
 11/05:
 Created 4 basic app:users, organization, courses, operation. operation is in the higher level that could import other apps .<br>
 11/07:
-Finished models.py in user and course. <br>
-Started doing html files<br>
+Finished models.py in user and course. Started doing HTML/CSS files<br>
 11/15:
 Finished models.py in organization and operaton. <br>
 11/24:
