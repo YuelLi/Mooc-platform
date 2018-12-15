@@ -15,4 +15,6 @@ Finished models.py in user and course.<br>
 11/15:
 Finished models.py in organization and operaton. <br>
 11/24:
-Setting up using [Xadmin](https://github.com/sshwsfc/xadmin) instead of default admin in Django
+Setting up using [xadmin](https://github.com/sshwsfc/xadmin) instead of default admin in Django
+12/2:
+Finshing up xadmin Configuration on created models.
