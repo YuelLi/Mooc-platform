@@ -5,16 +5,17 @@ A project for self-study <br>
 <br>
 <br>
 <b>Logs:</b><br>
-10/29:
+10/29:<br>
 Created virtual enviroment django_env and Django dev enviroment on Pycharm.<br>
 MySQL database mooc_platform on localhost and installed [sqlclient for python](https://github.com/PyMySQL/mysqlclient-python).<br>
-11/05:
+11/05:<br>
 Created 4 basic app:users, organization, courses, operation. operation is in the higher level that could import other apps .<br>
-11/07:
+11/07:<br>
 Finished models.py in user and course. Started doing HTML/CSS files<br>
-11/15:
+11/15:<br>
 Finished models.py in organization and operaton. <br>
-11/24:
+Found HTML/CSS resources online. Started JS parts.
+11/24:<br>
 Setting up using [xadmin](https://github.com/sshwsfc/xadmin) instead of default admin in Django<br>
-12/2:
+12/2:<br>
 Finshing up xadmin Configuration on created models.
