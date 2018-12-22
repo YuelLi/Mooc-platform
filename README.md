@@ -20,3 +20,5 @@ Started JS parts.<br>
 Finished index.html and login.html<br>
 * 12/2:<br>
 Finshing up xadmin Configuration on created models.
+* 12/10: <br>
+Finished index, login and register. For captach in register.html using [django-simple-captcha](https://github.com/mbi/django-simple-captcha)
