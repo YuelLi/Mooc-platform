@@ -22,3 +22,5 @@ Finished index.html and login.html<br>
 Finshing up xadmin Configuration on created models.
 * 12/10: <br>
 Finished index, login and register. For captach in register.html using [django-simple-captcha](https://github.com/mbi/django-simple-captcha)
+* 12/14: <br>
+Finished email verification
