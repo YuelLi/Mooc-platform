@@ -24,7 +24,7 @@ class UserProfile(AbstractUser):
 class EmailVerifyRecord(models.Model):
     code = models.CharField(max_length=20,verbose_name="Verification code")
     email = models.EmailField(max_length=50, verbose_name="Email address")
-    send_type=models.CharField(choices=(("reg","Register"),("for","Forget password")),max_length=5,verbose_name="Type")
+    send_type=models.CharField(choices=(("r","Register"),("f","Forget password")),max_length=2,verbose_name="Type")
     send_time=models.DateTimeField(default=datetime.now,verbose_name="Time")
 
     class Meta:

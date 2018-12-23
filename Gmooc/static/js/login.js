@@ -26,7 +26,6 @@ var zyemail="",
     zy_c_num=60,
     zy_str="";
 
-//激活邮箱事件
 function zy_Countdown(){
     zy_c_num--;
     $(".sendE2 span").html(zy_c_num+"s");
@@ -41,7 +40,6 @@ function zy_Countdown(){
     setTimeout("zy_Countdown()",1000);
 }
 
-//刷新验证码
 function refresh_captcha(event){
     $.get("/captcha/refresh/?"+Math.random(), function(result){
         $('#'+event.data.form_id+' .captcha').attr("src",result.image_url);
@@ -50,7 +48,6 @@ function refresh_captcha(event){
     return false;
 }
 
-//登录表单提交
 function login_form_submit(){
     var $jsLoginBtn = $('#jsLoginBtn'),
         $jsLoginTips = $('#jsLoginTips'),
@@ -80,11 +77,11 @@ function login_form_submit(){
         cache: false,
         type: 'post',
         dataType:'json',
-        url:"/user/login/",
+        url:"/login/",
         data:$('#jsLoginForm').serialize() + '&autologin='+autoLogin + '&' + arg[0] + '=' + arg[1],
         async: true,
         beforeSend:function(XMLHttpRequest){
-            $jsLoginBtn.val("登录中...");
+            $jsLoginBtn.val("logging in...");
             $jsLoginBtn.attr("disabled","disabled");
         },
         success: function(data) {
@@ -97,7 +94,6 @@ function login_form_submit(){
                     $('#jsLoginForm')[0].reset();
                     window.location.href = data.url;
                 }else if(data.status == "failure"){
-                    //注册账户处于未激活状态
                     if(data.msg=='no_active'){
                         zyemail = $accountl.val();
                         zyUname = zyemail;
@@ -111,13 +107,13 @@ function login_form_submit(){
                          Dml.fun.showDialog('#jsUnactiveForm');
                     }
                     else{
-                        $jsLoginTips.html("账号或者密码错误，请重新输入").show();
+                        $jsLoginTips.html("Username or password you specified are incorrect").show();
                     }
                 }
             }
         },
         complete: function(XMLHttpRequest){
-            $jsLoginBtn.val("登录");
+            $jsLoginBtn.val("login");
             $jsLoginBtn.removeAttr("disabled");
         }
     });
@@ -125,7 +121,6 @@ function login_form_submit(){
 }
 
 
-//找回密码表单提交
 function find_password_form_submit(){
  var $findPwdBtn = $("#jsFindPwdBtn"),
      $idAccount = $("#account");
@@ -147,7 +142,7 @@ function find_password_form_submit(){
         data:$('#jsFindPwdForm').serialize(),
         async: true,
         beforeSend:function(XMLHttpRequest){
-            $findPwdBtn.val("提交中...")
+            $findPwdBtn.val("submitting...")
             $findPwdBtn.attr("disabled","disabled")
         },
         success: function(data) {
@@ -159,24 +154,24 @@ function find_password_form_submit(){
             }else{
                 if($idAccount.val().indexOf("@") > 0 ){
                     Dml.fun.showTipsDialog({
-                        title: '提交成功',
-                        h2: '我们已经向你的邮箱'+ $idAccount.val() +'发送了邮件，请通过邮件中的链接修改密码。'
+                        title: 'Successfully submitted',
+                        h2: 'We Already sent an email to :'+ $idAccount.val() +'Please change your password via the link in the email.'
                     });
                     $('#jsFindPwdForm')[0].reset();
                     setTimeout(function(){window.location.href = window.location.href;},1500);
                 }else{
                     if(data.status == 'success'){
-                        $('#jsForgetTips').html("手机短信验证码已发送，请查收！").show();
+                        $('#jsForgetTips').html("SMS verification code has been sent").show();
                         $('#jsInpResetMobil').val($idAccount.val());
                         setTimeout(function(){Dml.fun.showDialog('#jsSetNewPwd')},1500);
                     }else if(data.status == 'failure'){
-                        $('#jsForgetTips').html("手机短信验证码发送失败！").show();
+                        $('#jsForgetTips').html("SMS verification code failed to send!").show();
                     }
                 }
             }
         },
         complete: function(XMLHttpRequest){
-            $findPwdBtn.val("提交");
+            $findPwdBtn.val("submit");
             $findPwdBtn.removeAttr("disabled");
         }
     });
@@ -206,20 +201,20 @@ $('#jsSetNewPwdBtn').on('click', function(){
         data:$('#jsSetNewPwdForm').serialize(),
         async: true,
         beforeSend:function(XMLHttpRequest){
-            _self.val("提交中...")
+            _self.val("submitting...")
             _self.attr("disabled","disabled")
         },
         success: function(data) {
             if(data.status == 'success'){
                 Dml.fun.showTipsDialog({
-                    title:'重置成功',
-                    h2:'重置密码成功！'
+                    title:'Successfully Reset',
+                    h2:'Your password has been reset'
                 });
                 $('#jsSetNewPwdForm')[0].reset();
                 Dml.fun.winReload();
             }else if(data.status == 'faliuer'){
                  Dml.fun.showTipsDialog({
-                    title:'重置失败',
+                    title:'Reset failed',
                     h2:data.msg,
                     type:'failbox'
                 })
@@ -228,14 +223,13 @@ $('#jsSetNewPwdBtn').on('click', function(){
             }
         },
         complete: function(XMLHttpRequest){
-            _self.val("提交");
+            _self.val("Submit");
             _self.removeAttr("disabled");
         }
     });
 })
 
 $(function() {
-    //兼容IE9下placeholder不显示问题
     function isPlaceholder(){
         var input = document.createElement('input');
         return 'placeholder' in input;
@@ -341,16 +335,15 @@ $(function() {
     $('#jsFindPwdForm .captcha').click({'form_id':'jsFindPwdForm'},refresh_captcha);
     $('#jsChangePhoneForm .captcha').click({'form_id':'jsChangePhoneForm'},refresh_captcha);
 
-    //登录
-    // $('#jsLoginBtn').on('click',function(){
-    //     login_form_submit();
-    // })
+    $('#jsLoginBtn').on('click',function(){
+        login_form_submit();
+    })
     // //登录表单键盘事件
-    // $("#jsLoginForm").keydown(function(event){
-    //     if(event.keyCode == 13) {
-    //         $('#jsLoginBtn').trigger('click');
-    //     }
-    // });
+    $("#jsLoginForm").keydown(function(event){
+         if(event.keyCode == 13) {
+            $('#jsLoginBtn').trigger('click');
+         }
+    });
 
     //邮箱注册
     $('#jsEmailRegBtn').on('click',function(){

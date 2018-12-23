@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# authentication method overwrite
+AUTHENTICATION_BACKENDS=(
+    'user.views.CustomBackend',
+)
 
 # Application definition
 
@@ -43,7 +47,8 @@ INSTALLED_APPS = [
     'organization',
     'operation',
     'xadmin',
-    'crispy_forms'
+    'crispy_forms',
+    'captcha'
 ]
 AUTH_USER_MODEL="user.UserProfile"
 
@@ -133,3 +138,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR,'static')
 ]
+
+# Send E-mails
+EMAIL_HOST ="smtp.gmail.com"
+EMAIL_PORT =587
+EMAIL_HOST_USER="gmooc.code@gmail.com"
+EMAIL_HOST_PASSWORD="gmooc123"
+EMAIL_USE_TLS=True
+EMAIL_FROM="gmooc.code@gmail.com"

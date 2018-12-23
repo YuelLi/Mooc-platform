@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Gmooc.iml" filepath="$PROJECT_DIR$/.idea/Gmooc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/Mooc_platform.iml" filepath="$PROJECT_DIR$/.idea/Mooc_platform.iml" />
     </modules>
   </component>
 </project>

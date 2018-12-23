@@ -22,8 +22,8 @@ class BaseSetting(object):
     use_bootswatch = True
 
 class GlobalSetting(object):
-    site_title="Mooc Platform Admin"
-    site_footer="Mooc Platform"
+    site_title="GMooc Admin"
+    site_footer="GMooc"
     menu_style= "accordion"
 
 xadmin.site.register(views.BaseAdminView,BaseSetting)

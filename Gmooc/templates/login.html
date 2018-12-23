@@ -21,7 +21,7 @@
     </div>
 </div>
 <div  class="noactivebox dialogbox" id="jsUnactiveForm" >
-    <h1>Mail verification</h1>
+    <h1>E-mail verification</h1>
     <div class="close jsCloseDialog"><img src="/static/images/dig_close.png"/></div>
     <div class="center">
         <img src="/static/images/send.png"/>
@@ -37,10 +37,10 @@
 <header>
     <div class="c-box fff-box">
         <div class="wp header-box">
-            <p class="fl hd-tips">Mooc Plaform</p>
+            <p class="fl hd-tips">GMooc</p>
             <ul class="fr hd-bar">
-                <li class="active"><a href="/login/">[login]</a></li>
-                <li><a href="register.html">[register]</a></li>
+                <li class="active"><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
             </ul>
         </div>
     </div>
@@ -49,9 +49,9 @@
     <div class="c-box bg-box">
         <div class="login-box clearfix">
             <div class="hd-login clearfix">
-                <a class="index-logo" href="index.html"></a>
+                <a class="index-logo" href="{% url 'index' %}"></a>
                 <h1>User Login</h1>
-                <a class="index-font" href="index.html">Home Page</a>
+                <a class="index-font" href="{% url 'index' %}">Home Page</a>
             </div>
             <div class="fl slide">
                 <div class="imgslide">
@@ -66,22 +66,21 @@
             </div>
             <div class="fl form-box">
                 <h2>Login</h2>
-                <form action="login.html" method="post" autocomplete="off">
-                    <div class="form-group marb20 ">
-
-                        <input name="username" id="account_l" type="text" placeholder="Username/Email Address" />
+                <form action="{% url 'login' %}" method="post" autocomplete="off">
+                    <div class="form-group marb20 {% if login_form.errors.username %} errorput {% endif %}">
+                        <input name="username" id="account_l" type="text" value="{{ login_form.username.value }}" placeholder="Username/Email Address" />
                     </div>
-                    <div class="form-group marb8 ">
-                        <input name="password" id="password_l" type="password" placeholder="password" />
+                    <div class="form-group marb8 {% if login_form.errors.password %} errorput {% endif %}">
+                        <input name="password" id="password_l" type="password"  placeholder="Password" />
                     </div>
-                    <div class="error btns login-form-tips" id="jsLoginTips"></div>
+                    <div class="error btns login-form-tips" id="jsLoginTips">{% for key, error in login_form.errors.items %}{{error}}{% endfor %}{{ msg }}</div>
                      <div class="auto-box marb38">
-
-                        <a class="fr" href="forgetpwd.html">Forgot Password?</a>
+                        <a class="fr" href="{% url 'reset' %}">Forgot Password?</a>
                      </div>
                      <input class="btn btn-green" id="jsLoginBtn" type="submit" value="Sign In > " />
+                     {% csrf_token %}
                 </form>
-                <p class="form-p">No Account?<a href="register.html">[Sign Up]</a></p>
+                <p class="form-p">No Account?<a href="{% url 'register' %}">[Sign Up]</a></p>
             </div>
         </div>
     </div>
