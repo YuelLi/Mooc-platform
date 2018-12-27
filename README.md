@@ -2,6 +2,11 @@
 Django(2.1.2), MySQL(8.0) <br>
 A project for self-study <br>
 <br>
+## Get Started:
+* Create virtual environment via venv:
+* `python -m venv ENV`
+* Install required modules:
+* `pip install -r requirements.txt`
 <br>
 ## Logs:<br>
 * 10/29:<br>
@@ -24,3 +29,5 @@ Finshing up xadmin Configuration on created models.
 Finished index, login and register. For captach in register.html using [django-simple-captcha](https://github.com/mbi/django-simple-captcha)
 * 12/14: <br>
 Finished email verification
+* 12/15: <br>
+Reconfigured the set up
