@@ -90,9 +90,9 @@ WSGI_APPLICATION = 'Gmooc.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Mooc_platform',
+        'NAME': 'Gmooc',
         'USER': 'root',
-        'PASSWORD':'root',
+        'PASSWORD':'root1234',
         'HOST': 'localhost'
     }
 }
