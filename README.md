@@ -7,27 +7,26 @@ A project for self-study <br>
 * `python -m venv ENV`
 * Install required modules:
 * `pip install -r requirements.txt`
-<br>
-## Logs:<br>
-* 10/29:<br>
-Created virtual enviroment django_env and Django dev enviroment on Pycharm.<br>
-MySQL database mooc_platform on localhost and installed [sqlclient for python](https://github.com/PyMySQL/mysqlclient-python).<br>
-* 11/05:<br>
-Created 4 basic app:users, organization, courses, operation. operation is in the higher level that could import other apps .<br>
-* 11/07:<br>
-Finished models.py in user and course. Started doing HTML/CSS files<br>
-* 11/15:<br>
-Finished models.py in organization and operaton. <br>
-Found HTML/CSS templates online. <br>
-* 11/24:<br>
-Setting up using [xadmin](https://github.com/sshwsfc/xadmin) instead of default admin in Django<br>
-Started JS parts.<br>
-Finished index.html and login.html<br>
-* 12/2:<br>
-Finshing up xadmin Configuration on created models.
-* 12/10: <br>
-Finished index, login and register. For captach in register.html using [django-simple-captcha](https://github.com/mbi/django-simple-captcha)
-* 12/14: <br>
-Finished email verification
-* 12/15: <br>
-Reconfigured the set up
+## Logs:
+* 10/29:
+<br>Created virtual enviroment django_env and Django dev enviroment on Pycharm.
+<br>MySQL database mooc_platform on localhost and installed [sqlclient for python](https://github.com/PyMySQL/mysqlclient-python).
+* 11/05:
+<br>Created 4 basic app:users, organization, courses, operation. operation is in the higher level that could import other apps .
+* 11/07:
+<br>Finished models.py in user and course. Started doing HTML/CSS files<br>
+* 11/15:
+<br>Finished models.py in organization and operaton.
+<br>Found HTML/CSS templates online. 
+* 11/24:
+<br>Setting up using [xadmin](https://github.com/sshwsfc/xadmin) instead of default admin in Django.
+<br>Started JS parts.
+<br> Finished index.html and login.html
+* 12/2:
+<br> Finshing up xadmin Configuration on created models.
+* 12/10:
+<br> Finished index, login and register. For captach in register.html using [django-simple-captcha](https://github.com/mbi/django-simple-captcha)
+* 12/14:
+<br> Finished email verification
+* 12/15:
+<br> Reconfigured the set up
