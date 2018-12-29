@@ -5,6 +5,8 @@ A project for self-study <br>
 ## Get Started:
 * Create virtual environment via venv:
 * `python -m venv ENV`
+* Create Mysql database
+* Change Settings.py to configurate database
 * Install required modules:
 * `pip install -r requirements.txt`
 ## Logs:
