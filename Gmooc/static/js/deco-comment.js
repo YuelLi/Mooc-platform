@@ -39,14 +39,14 @@ function submit_comment(){
 	var	is_teacher = $('#is_teacher').val();
 	var	teacher = "";
 		if(is_teacher =='True'){
-			teacher = '<span class="grade">老师</span>';
+			teacher = '<span class="grade">Instructors</span>';
 		}
 	//zhouyi:8-5
 	$('#release_com').click(function(){
 
 		comment = $(this).parent().parent().find('textarea:first').val();
 		if(comment.trim()=='') {
-			layer.tips('内容不能为空!', '.comment-input .btnbox>button', {tips: [2, '#68c8b6']});
+			layer.tips('Cannot be blank', '.comment-input .btnbox>button', {tips: [2, '#68c8b6']});
 			return;
 		}
 		parent_id = ""
@@ -66,7 +66,7 @@ function submit_comment(){
 	$('.reply').live("click",function(){
 		comment = $(this).parent().parent().find('textarea:first').val();
 		if(comment.trim()=='') {
-			layer.tips('内容不能为空!', '.comment-input .btnbox>button', {tips: [2, '#68c8b6']});
+			layer.tips('Cannot be blank', '.comment-input .btnbox>button', {tips: [2, '#68c8b6']});
 			return;
 		}
 		classname = $(this).attr('class');
@@ -174,11 +174,11 @@ function page_commment(page){
 								console.log($(this).prev().height())
 								if($(this).prev().height()<=114) {
 									$(this).prev().height("auto");
-									$(this).html("收起");
+									$(this).html("less");
 								}
 								else{
 									$(this).prev().height(114);
-									$(this).html("查看更多");
+									$(this).html("more");
 								}
 							});
 						}
@@ -186,9 +186,9 @@ function page_commment(page){
 
             	}else{
             		if(page == 1){
-            			$('#load_message').html('沙发空缺中，还不快抢！');
+            			$('#load_message').html('Come to comment!!!');
             		}else{
-            			$('#load_message').html('没有更多评论了');
+            			$('#load_message').html('No More comments');
             		}
             	}
             }
@@ -206,7 +206,7 @@ function click_load_more(){
 function getopage(zbn,num){
 	page_commment(zbn);
 	$(".zypage_div").zPages({
-		perPage : num, //总页数
+		perPage : num, 
 		first:"",
         last:"",
 		funC:page_commment,
