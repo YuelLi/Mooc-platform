@@ -6,7 +6,7 @@ from django.views.generic.base import View
 from django.contrib.auth.hashers import make_password
 
 from .models import UserProfile, EmailVerifyRecord
-from .forms import LoginForm, RegisterForm, ResetPwdForm
+from .forms import LoginForm, RegisterForm, ResetPwdForm, ModifyPwdForm
 from utils.email import send_email
 # Create your views here.
 
@@ -92,3 +92,34 @@ class ForgotPwdView(View):
             return render(request,"send_success.html")
         else:
             return render(request,"resetpwd.html",{"reset_form":reset_form})
+
+
+class ResetPwdView(View):
+    def get(self,request,code):
+        all_records= EmailVerifyRecord.objects.filter(code=code)
+        if all_records:
+            for record in all_records:
+                email=record.email
+            return render(request, "password_reset.html",{"email":email})
+        else:
+            return render(request, "activate_fail.html")
+
+
+class ModifyPwdView(View):
+    def post(self,request):
+        modify_pwd_form = ModifyPwdForm(request.POST)
+        if modify_pwd_form.is_valid():
+            pwd1 =request.POST.get("password1","")
+            pwd2 =request.POST.get("password2","")
+            email= request.POST.get("email","")
+            if pwd1 != pwd2:
+                return render(request, "password_reset.html", {"email": email, "msg":"Passwords are inconsistent"})
+            user=UserProfile.objects.get(email=email)
+            user.password=make_password(pwd1)
+            user.save()
+
+            return render(request, "login.html")
+        else:
+            email = request.POST.get("email", "")
+            return render(request, "password_reset.html", {"email": email, "modify_pwd_form":modify_pwd_form})
+

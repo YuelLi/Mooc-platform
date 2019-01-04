@@ -15,3 +15,8 @@ class RegisterForm(forms.Form):
 class ResetPwdForm(forms.Form):
     email=forms.EmailField(required=True)
     captcha = CaptchaField()
+
+class ModifyPwdForm(forms.Form):
+    password1= forms.CharField(required=True, min_length=5)
+    password2 = forms.CharField(required=True, min_length=5)
+
