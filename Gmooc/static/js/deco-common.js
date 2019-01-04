@@ -109,7 +109,7 @@ function find_password_form_submit(){
         data:$('#jsFindPwdForm').serialize(),
         async: true,
         beforeSend:function(XMLHttpRequest){
-            $findPwdBtn.val("提交中...")
+            $findPwdBtn.val("submitting...")
             $findPwdBtn.attr("disabled","disabled")
         },
         success: function(data) {
@@ -121,8 +121,8 @@ function find_password_form_submit(){
             }else{
                 if($idAccount.val().indexOf("@") > 0 ){
                     Dml.fun.showTipsDialog({
-                        title: '提交成功',
-                        h2: '我们已经向你的邮箱'+ $idAccount.val() +'发送了邮件，请通过邮件中的链接修改密码。'
+                        title: 'submitted',
+                        h2: 'We have sent an email to '+ $idAccount.val() +'please change the password via the link in the email.'
                     });
                     $('#jsFindPwdForm')[0].reset();
                     setTimeout(function(){window.location.href = window.location.href;},1500);
@@ -138,7 +138,7 @@ function find_password_form_submit(){
             }
         },
         complete: function(XMLHttpRequest){
-            $findPwdBtn.val("提交");
+            $findPwdBtn.val("submit");
             $findPwdBtn.removeAttr("disabled");
         }
     });
@@ -167,19 +167,19 @@ $('#jsSetNewPwdBtn').on('click', function(){
         data:$('#jsSetNewPwdForm').serialize(),
         async: true,
         beforeSend:function(XMLHttpRequest){
-            _self.val("提交中...")
+            _self.val("submitting...")
             _self.attr("disabled","disabled")
         },
         success: function(data) {
             if(data.status == 'success'){
                 Dml.fun.showTipsDialog({
-                    title:'重置成功',
-                    h2:'重置密码成功！'
+                    title:'Reset successfully',
+                    h2:'Reset successfully'
                 });
                 $('#jsSetNewPwdForm')[0].reset();
             }else if(data.status == 'faliuer'){
                  Dml.fun.showTipsDialog({
-                    title:'重置失败',
+                    title:'Failed to reset',
                     h2:data.msg,
                     type:'failbox'
                 })
@@ -188,7 +188,7 @@ $('#jsSetNewPwdBtn').on('click', function(){
             }
         },
         complete: function(XMLHttpRequest){
-            _self.val("提交");
+            _self.val("submit");
             _self.removeAttr("disabled");
         }
     });
@@ -211,7 +211,7 @@ function favPraise($elem, fun ,typeid){
         }
         styleClass1 = 'collected';
         styleClass2 = 'uncollect';
-        btnFont = '已' + btnFont;
+        btnFont = 'Already' + btnFont;
         btnFont2 = arguments[3] || '';
         if(num > 0) numChange = num - 1;
     } else {
@@ -222,7 +222,7 @@ function favPraise($elem, fun ,typeid){
         }
         styleClass1 = 'uncollect';
         styleClass2 = 'collected';
-        btnFont2 = '已' + btnFont;
+        btnFont2 = 'Already' + btnFont;
         numChange = num + 1;
     }
     var csrftoken = getCookie('csrftoken');
@@ -604,7 +604,7 @@ $(function() {
                 "height":"auto",
                 "overflow":"visible"
             }).addClass("opened");
-            $('.listoptions').find('.more').html('收起')
+            $('.listoptions').find('.more').html('Less')
         }else{
 
             $('.listoptions .cont').css({
@@ -612,7 +612,7 @@ $(function() {
                 "overflow":"hidden"
             }).removeClass("opened");
 
-            $('.listoptions').find('.more').html('更多')
+            $('.listoptions').find('.more').html('More')
         }
     });
 
