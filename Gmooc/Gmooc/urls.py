@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
+from django.conf import settings
+from django.conf.urls.static import static
 import xadmin
 
-from user.views import LoginView, RegisterView, ActivateView,ForgotPwdView
+from user.views import LoginView, RegisterView, ActivateView,ForgotPwdView,ResetPwdView, ModifyPwdView
+from organization.views import OrgView
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
     path('',TemplateView.as_view(template_name="index.html"), name="index"),
@@ -27,4 +30,10 @@ urlpatterns = [
     path('captcha/', include('captcha.urls')),
     path('activate/<code>/', ActivateView.as_view(), name="activate"),
     path('reset/',ForgotPwdView.as_view(),name="reset"),
-]
+    path('reset/password/<code>/',ResetPwdView.as_view(), name="reset_pwd"),
+    path('modify/',ModifyPwdView.as_view(),name="modify_pwd" ),
+
+    # organization
+    path('org_list/',OrgView.as_view(), name="org_list"),
+
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
