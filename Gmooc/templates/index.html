@@ -76,13 +76,13 @@
 							<li class="active" ><a href="{% url 'index' %}">Home Page</a></li>
 							<li >
 								<a href="course-list.html">
-									Course<img class="hot" src="/static/images/nav_hot.png">
+									Courses<img class="hot" src="/static/images/nav_hot.png">
 								</a>
 							</li>
 							<li >
-								<a href="teachers-list.html">Instructor</a>
+								<a href="teachers-list.html">Instructors</a>
 							</li>
-							<li ><a href="org-list.html">Course Organization</a></li>
+							<li ><a href="{% url 'org_list' %}">Organizations</a></li>
 						</ul>
 					</div>
 				</div>
@@ -549,8 +549,8 @@
 			</div>
 			<p class="line"></p>
 			<div class="wp clear">
-                <span class="fl"></span>
-                <span class="fr">copyright XXXXX</span>
+                <span class="fl">Gmooc</span>
+                <span class="fr">Copyright XXXXX</span>
 			</div>
 		</div>
 	</footer>
