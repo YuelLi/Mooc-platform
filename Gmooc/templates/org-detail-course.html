@@ -1,0 +1,36 @@
+{% extends 'org-detial-base.html' %}
+{% block title %}Courses - {{ course_org.name }}{% endblock %}
+{% block page_path %}Courses{% endblock %}
+{% block right %}
+    <div class="right companycenter layout" >
+		<div class="head">
+			<h1>All Courses</h1>
+		</div>
+		<div class="brief group_list">
+
+            {% for course in all_courses %}
+                <div class="module1_5 box">
+                    <a href="course-detail.html"><img width="214" src="/media/{{ course.image }}"/></a>
+                    <div class="des">
+                        <a href="course-detail.html"><h2>{{ course.name }}</h2></a>
+                        <span class="fl">Hours:<i class="key">{{ course.study_time }}</i></span>
+                        <span class="fr">Students: {{ course.student_num }}</span>
+                    </div>
+                    <div class="bottom">
+                        <span class="fl">{{ course.course_org.name }}</span>
+                         <span class="star fr  notlogin
+                            " data-favid="13"  data-fav-type="4">
+                            {{ course.favor_num }}
+                        </span>
+                    </div>
+                </div>
+            {% endfor %}
+
+		</div>
+			<div class="pageturn">
+                <ul class="pagelist">
+                    <li class="active"><a href="?page=1">1</a></li>
+                </ul>
+            </div>
+	</div>
+{% endblock %}

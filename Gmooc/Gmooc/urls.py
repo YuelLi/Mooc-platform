@@ -33,7 +33,7 @@ urlpatterns = [
     path('reset/password/<code>/',ResetPwdView.as_view(), name="reset_pwd"),
     path('modify/',ModifyPwdView.as_view(),name="modify_pwd" ),
 
-    # organization
-    path('org_list/',OrgView.as_view(), name="org_list"),
+    # organization urls
+    path('org/', include('organization.urls')),
 
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

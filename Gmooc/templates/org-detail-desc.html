@@ -1,0 +1,11 @@
+{% extends 'org-detial-base.html' %}
+{% block title %}Description- {{ course_org.name }}{% endblock %}
+{% block page_path %}Description{% endblock %}
+{% block right %}
+    <div class="right companycenter layout" >
+    <div class="head">
+        <h1>Description</h1>
+    </div>
+    <div class="cont">&nbsp; &nbsp; {{ course_org.desc }}</div>
+    </div>
+{% endblock %}

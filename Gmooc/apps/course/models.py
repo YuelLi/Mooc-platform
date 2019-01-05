@@ -1,11 +1,13 @@
 from datetime import datetime
 
 from django.db import models
+from organization.models import CourseOrg
 # Create your models here.
 
 
 class Course(models.Model):
     name=models.CharField(max_length=50,verbose_name="Course name")
+    course_org=models.ForeignKey(CourseOrg, verbose_name="Organization", on_delete=models.CASCADE)
     desc=models.CharField(max_length=50,verbose_name="Course description")
     detail=models.TextField(verbose_name="Course detail")
     difficulty=models.CharField(choices=(("el","Elementary"),("in","Intermediate"),("ad","Advanced")),max_length=2,verbose_name="Difficulty")
