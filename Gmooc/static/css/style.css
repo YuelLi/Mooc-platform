@@ -5146,6 +5146,9 @@ footer .footer .line {
     margin-top: 40px;
     cursor: pointer;
 }
+.companyheader .btn:hover {
+    background: #ff8833 url(/static/images/star-btn-hover.png) no-repeat 15px center;
+}
 
 .companycenter {
     line-height: 200%;

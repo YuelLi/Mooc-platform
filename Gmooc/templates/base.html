@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
-	<title>{% block title %} GMooc {% endblock %}</title>
+	<title>{% block title %} {% endblock %}</title>
 	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
@@ -22,12 +22,12 @@
                         {% if request.user.is_authenticated %}
                             <div class="personal">
                             <dl class="user fr">
-                                <dd>user<img class="down fr" src="/static/images/top_down.png"/></dd>
-                                <dt><img width="20" height="20" src="/static/media/image/2016/12/default_big_14.png"/></dt>
+                                <dd>user<img class="down fr" src=""/></dd>
+                                <dt><img width="20" height="20" src=""/></dt>
                             </dl>
                             <div class="userdetail">
                             	<dl>
-	                                <dt><img width="80" height="80" src="/static/media/image/2016/12/default_big_14.png"/></dt>
+	                                <dt><img width="80" height="80" src=""/></dt>
 	                                <dd>
 	                                    <h2>django</h2>
 	                                    <p>user</p>
