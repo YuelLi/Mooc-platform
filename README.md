@@ -9,6 +9,16 @@ A project for self-study <br>
 * Change Settings.py to configurate database
 * Install required modules:
 * `pip install -r requirements.txt`
+* <strong>Be Noticed: </strong>
+* This project is using mysql. You have to install [sqlclient for python](https://github.com/PyMySQL/mysqlclient-python).
+* You also need to migrate models to database(after setting up database on settings.py):
+* `python manage.py makemigrations`
+* `python manage.py migrate`
+* To use xamdin, you should create superuser:
+* `python manage.py createsuperuser`
+* Modify data on xadmin(localhost for example):
+* http://localhost:8000/xadmin
+*
 ## Logs:
 * 10/29:
 <br>Created virtual enviroment django_env and Django dev enviroment on Pycharm.
