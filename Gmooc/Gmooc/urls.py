@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 import xadmin
 
 from user.views import LoginView, RegisterView, ActivateView,ForgotPwdView,ResetPwdView, ModifyPwdView
-from organization.views import OrgView
+from organization.views import InstructorListView, InstructorDetailView
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
     path('',TemplateView.as_view(template_name="index.html"), name="index"),
@@ -38,5 +38,9 @@ urlpatterns = [
 
     # course urls
     path('course/',include('course.urls')),
+
+    # instructor urls
+    path('instr/', InstructorListView.as_view(),name="instr-list"),
+    path('instr/detail/<instr_id>/', InstructorDetailView.as_view(),name="instr-detail"),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
