@@ -70,14 +70,16 @@ class UserConsultView(View):
 
 class OrgHomeView(View):
     def get(self,request, org_id):
-        current_page="home"
         course_org =CourseOrg.objects.get(id=int(org_id))
+        course_org.click_num+=1
+        course_org.save()
         is_favored=False
         if request.user.is_authenticated:
             if UserFavorite.objects.filter(user=request.user, fav_id=course_org.id, fav_type=2):
                 is_favored=True
         all_courses =course_org.course_set.all()[:3]
-        all_instructors= course_org.instructor_set.all()[:1]
+        all_instructors= course_org.instructor_set.all()[:2]
+        current_page = "home"
         return render(request,'org-detail-homepage.html',{
             'course_org':course_org,
             'all_courses':all_courses,
@@ -139,7 +141,6 @@ class AddFavorView(View):
     def post(self,request):
         fav_id = request.POST.get('fav_id',0)
         fav_type= request.POST.get('fav_type',0)
-
         if not request.user.is_authenticated:
             return HttpResponse('{"status":"fail","msg":"Not logged in"}', content_type='application/json')
 

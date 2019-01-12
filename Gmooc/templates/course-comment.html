@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+{% block title %} Comment - Gmooc{% endblock %}
+{% block nav %}
+<nav>
+    <div class="nav">
+        <div class="wp">
+            <ul>
+                <li ><a href="{% url 'index' %}">Home Page</a></li>
+                <li class="active">
+                    <a href="{% url 'course-list' %}">
+                        Courses<img class="hot" src="/static/images/nav_hot.png">
+                    </a>
+                </li>
+                <li >
+                    <a href="">Instructors</a>
+                </li>
+                <li >
+                    <a href="{% url 'org_list' %}">Organizations</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+{% block custom_crumbs %}
+<section>
+	<div class="wp">
+		<div class="crumbs">
+			<ul>
+				<li><a href="{% url 'index' %}">Home Page</a> > </li>
+                <li><a href="{% url 'course-list' %}">Courses</a> > </li>
+                <li><a href="{% url 'course-detail' course.id %}">Details</a> > </li>
+				<li>Comments</li>
+			</ul>
+		</div>
+	</div>
+</section>
+{% endblock %}
+{% block content %}
+    <div id="main">
+    <div class="course-infos">
+        <div class="w pr">
+            <div style="height: 15px" class="path">
+            </div>
+            <div class="hd">
+                <h2 class="l">{{ course.name }}</h2>
+            </div>
+            <div class="statics clearfix">
+                <div class="static-item ">
+                    <span class="meta-value"><strong>{{ course.get_difficulty_display }}</strong></span>
+                    <span class="meta">Difficulty</span>
+                    <em></em>
+                </div>
+                <div class="static-item static-time">
+                    <span class="meta-value">{{ course.study_time }} mins</span>
+                    <span class="meta">Time</span>
+                    <em></em>
+                </div>
+                <div class="static-item">
+                    <span class="meta-value"><strong>{{ course.student_num }}</strong></span>
+                    <span class="meta">Students</span>
+                    <em></em>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="course-info-main clearfix w has-progress">
+
+        <div class="info-bar clearfix">
+            <div class="content-wrap clearfix">
+                <div class="content">
+                    <div class="mod-tab-menu">
+                        <ul class="course-menu clearfix">
+                        <li><a id="learnOn"  href="{% url 'course-info' course.id %}"><span>Lesson</span></a></li>
+                        <li><a id="commentOn" class="ui-tabs-active active" href="{% url 'course-info' course.id %}"><span>Comment</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!--comment-->
+                    <div id="js-pub-container" class="issques clearfix js-form">
+                        <div class="wgt-ipt-wrap pub-editor-wrap " id="js-pl-input-fake">
+                            <textarea id="js-pl-textarea" class="" placeholder="Comment whatever you want here" ></textarea>
+                        </div>
+                        <input type="button" id="js-pl-submit" class="pub-btn" data-cid="452" value="comment">
+                        <p class="global-errortip js-global-error"></p>
+                    </div>
+                    <div id="course_note">
+                        <ul class="mod-post" id="comment-list">
+                            {% for comment in all_comments %}
+                            <li class="post-row">
+                                <div class="media">
+                                    <span target="_blank"><img src='/media/{{ comment.user.image }}' width='40' height='40' /></span>
+                                </div>
+                                <div class="bd">
+                                    <div class="tit">
+                                        <span target="_blank">{{ comment.user.nick_name }}</span>
+                                    </div>
+                                    <p class="cnt">{{ comment.comment }}</p>
+                                    <div class="footer clearfix">
+                                        <span title="add time" class="l timeago">Time: {{ comment.add_time }}</span>
+                                    </div>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="aside r">
+                <div class="bd">
+
+                    <div class="box mb40">
+                        <h4>Resources</h4>
+                        <ul class="downlist">
+                            {% for resource in resources %}
+                            <li>
+                                <span><i class="aui-iconfont aui-icon-file"></i> &nbsp;&nbsp;{{resource.name }}</span>
+                                <a href="/media/{{ resource.download }}" class="downcode" target="_blank" download="" data-id="274" title="">Download</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="box mb40">
+                        <h4>Instructor Tips</h4>
+                        <div class="teacher-info">
+                            <a href="teacher" target="_blank">
+                                <img src='/media/{{ course.instructor.image }}' width='80' height='80' />
+                            </a>
+                            <span class="tit">
+                              <a href="teacher" target="_blank">{{ course.instructor.name }}</a>
+                            </span>
+                            <span class="job">{{ course.instructor.position }}</span>
+                        </div>
+                        <div class="course-info-tip">
+                            <dl class="first">
+                                <dt>Requisite</dt>
+                                <dd class="autowrap">{{ course.requisite }}</dd>
+                            </dl>
+                            <dl>
+                                <dt>You'll learn</dt>
+                                <dd class="autowrap">{{ course.objective }}</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+
+                    <div class="cp-other-learned  js-comp-tabs">
+                        <div class="cp-header clearfix">
+                            <h2 class="cp-tit l">Classmates also had</h2>
+                        </div>
+                        <div class="cp-body">
+                            <div class="cp-tab-pannel js-comp-tab-pannel" data-pannel="course" style="display: block">
+                                <!-- img 200 x 112 -->
+                                <ul class="other-list">
+                                    {% for course in related_courses %}
+                                    <li class="curr">
+                                        <a href="{% url 'course-detail' course.id %}" target="_blank">
+                                            <img src="/media/{{ course.image }}" alt="">
+                                            <span class="name autowrap">{{ course.name }}</span>
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>    </div>
+            </div>
+            <div class="clear"></div>
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+{% block custom_css %}
+    <link rel="stylesheet" type="text/css" href="/static/css/muke/course/learn-less.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/muke/course/course-comment.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/muke/base.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/muke/common-less.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/muke/course/common-less.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/mooc.css" />
+{% endblock %}
+{% block custom_js %}
+<script type="text/javascript">
+    //add comment
+    $(document).ready(function() {
+        $('#js-pl-submit').on('click', function () {
+            var comment = $("#js-pl-textarea").val()
+            if (comment == "") {
+                alert("Comment cannot be empty")
+                return
+            }
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url: "{% url 'add_comment' %}",
+                data: {'course_id': {{ course.id }}, 'comment': comment },
+                async: true,
+                beforeSend: function (xhr, settings) {
+                    xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+                },
+                success: function (data) {
+                    if (data.status == 'fail') {
+                        if (data.msg == 'Not logged in') {
+                            window.location.href = "{% url 'login' %}";
+                        } else {
+                            alert(data.msg)
+                        }
+
+                    } else if (data.status == 'success') {
+                        window.location.reload();
+                    }
+                },
+            });
+        });
+    });
+
+</script>
+{% endblock %}

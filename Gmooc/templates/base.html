@@ -67,26 +67,9 @@
                 </div>
             </div>
 
+            {% block nav %}
 
-			<nav>
-				<div class="nav">
-					<div class="wp">
-						<ul>
-							<li ><a href="{% url 'index' %}">Home Page</a></li>
-							<li >
-								<a href="course-list.html">
-									Courses<img class="hot" src="/static/images/nav_hot.png">
-								</a>
-							</li>
-							<li >
-								<a href="teachers-list.html">Instructors</a>
-							</li>
-							<li class="active" ><a href="{% url 'org_list' %}">Organizations</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-
+            {% endblock %}
 			</div>
     </header>
 </section>

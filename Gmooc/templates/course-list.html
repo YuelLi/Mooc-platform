@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block title %} Courses - Gmooc{% endblock %}
+{% block nav %}
+<nav>
+    <div class="nav">
+        <div class="wp">
+            <ul>
+                <li >
+                    <a href="{% url 'index' %}">Home Page</a>
+                </li>
+                <li class="active">
+                    <a href="{% url 'course-list' %}">
+                        Courses<img class="hot" src="/static/images/nav_hot.png">
+                    </a>
+                </li>
+                <li >
+                    <a href="">Instructors</a>
+                </li>
+                <li>
+                    <a href="{% url 'org_list' %}">Organizations</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+{% block custom_crumbs %}
+<section>
+    <div class="wp">
+        <ul  class="crumbs">
+            <li><a href="{% url 'index' %}">Home Page</a> > </li>
+            <li> Courses> </li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+    <section>
+	<div class="wp">
+		<div class="list" style="margin-top:0;">
+			<div class="left layout">
+				<div class="head">
+					<ul class="tab_header">
+						<li class="{% ifequal sort '' %}active{% endifequal %}"><a href="?sort=">Latest</a></li>
+						<li class="{% ifequal sort 'popular' %}active{% endifequal %}"><a href="?sort=popular">Most popular</a></li>
+						<li class="{% ifequal sort 'enrolled' %}active{% endifequal %}"><a href="?sort=enrolled">Enrolled</a></li>
+					</ul>
+				</div>
+                <div id="inWindow">
+                    <div class="tab_cont " id="content">
+					<div class="group_list">
+                        {% for course in all_courses.object_list %}
+                            <div class="box">
+                                <a href="{% url 'course-detail' course.id %}">
+                                    <img width="280" height="350" src="/media/{{ course.image }}"/>
+                                </a>
+                                <div class="des">
+                                    <a href="{% url 'course-detail' course.id %}">
+                                        <h2>{{ course.name }}</h2>
+                                    </a>
+                                    <span class="fl">Time: <i class="key">{{ course.study_time }} hours</i></span>
+                                    <span class="fr">Enrolled: {{ course.student_num }}&nbsp;&nbsp;</span>
+                                </div>
+                                <div class="bottom">
+                                    <a href="{% url 'course-detail' course.id %}"><span class="fl">From {{ course.course_org }}</span></a>
+                                    <span class="star fr  notlogin
+                                        " data-favid="15">
+                                        {{ course.favor_num }}
+                                    </span>
+                                </div>
+                            </div>
+                        {% endfor %}
+					</div>
+                    <div class="pageturn">
+                        <ul class="pagelist">
+                            {% if all_courses.has_previous %}
+                                <li class="long"><a href="?{{ all_courses.previous_page_number.querystring }}">Prev</a></li>
+                            {% endif %}
+
+                            {% for page in all_courses.pages %}
+                                {% if page %}
+                                    {% ifequal page all_courses.number %}
+                                        <li class="active"><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                                    {% else %}
+                                        <li><a href="?{{ page.querystring }}" class="page">{{ page }}</a></li>
+                                    {% endifequal %}
+                                {% else %}
+                                    <li class="none"><a href="">...</a></li>
+                                {% endif %}
+                            {% endfor %}
+
+                            {% if all_courses.has_next %}
+                                <li class="long"><a href="?{{ all_courses.next_page_number.querystring }}">Next</a></li>
+                            {% endif %}
+
+                        </ul>
+                    </div>
+				</div>
+                </div>
+			</div>
+			<div class="right layout">
+				<div class="head">Recommended Courses</div>
+				<div class="group_recommend">
+                    {% for course in recommended_course %}
+                    <dl>
+						<dt>
+							<a target="_blank" href="">
+								<img width="240" height="220" src="/media/{{ course.image }}"/>
+							</a>
+						</dt>
+						<dd>
+							<a target="_blank" href=""><h3>{{ course.name }}</h3></a>
+							<span class="fl">Difficulty:<i class="key"> {{ course.get_difficulty_display }}</i></span>
+						</dd>
+					</dl>
+                    {% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
+

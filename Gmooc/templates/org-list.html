@@ -12,6 +12,29 @@
 </section>
 {% endblock %}
 
+{% block nav %}
+<nav>
+    <div class="nav">
+        <div class="wp">
+            <ul>
+                <li ><a href="{% url 'index' %}">Home Page</a></li>
+                <li >
+                    <a href="{% url 'course-list' %}">
+                        Courses<img class="hot" src="/static/images/nav_hot.png">
+                    </a>
+                </li>
+                <li >
+                    <a href="">Instructors</a>
+                </li>
+                <li class="active" >
+                    <a href="{% url 'org_list' %}">Organizations</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
 {% block content %}
 <section>
 	<div class="wp butler_list_box list">

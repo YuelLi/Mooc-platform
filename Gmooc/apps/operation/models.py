@@ -49,7 +49,7 @@ class UserMessage(models.Model):
 
 class UserCourse(models.Model):
     user = models.ForeignKey(UserProfile, verbose_name="User",on_delete=models.CASCADE)
-    course= models.ForeignKey(Course,verbose_name="Course",on_delete=models.CASCADE)
+    course = models.ForeignKey(Course,verbose_name="Course",on_delete=models.CASCADE)
     add_time = models.DateTimeField(default=datetime.now, verbose_name="add time")
 
     class Meta:

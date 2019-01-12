@@ -10,7 +10,7 @@
 
             {% for course in all_courses %}
                 <div class="module1_5 box">
-                    <a href="course-detail.html"><img width="214" src="/media/{{ course.image }}"/></a>
+                    <a href="{% url 'course-detail' course.id %}.html"><img width="214" src="/media/{{ course.image }}"/></a>
                     <div class="des">
                         <a href="course-detail.html"><h2>{{ course.name }}</h2></a>
                         <span class="fl">Hours:<i class="key">{{ course.study_time }}</i></span>

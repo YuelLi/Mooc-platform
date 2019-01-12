@@ -75,7 +75,7 @@
 						<ul>
 							<li class="active" ><a href="{% url 'index' %}">Home Page</a></li>
 							<li >
-								<a href="course-list.html">
+								<a href="{% url 'course-list' %}">
 									Courses<img class="hot" src="/static/images/nav_hot.png">
 								</a>
 							</li>
@@ -176,7 +176,7 @@
 					<div class="module1_1 left">
 						<img width="228" height="614" src="/static/images/module1_1.jpg"/>
 						<p class="fisrt_word">123<br/>123</p>
-						<a class="more" href="course-list.html">More Courses ></a>
+						<a class="more" href="{% url 'course-list' %}">More Courses ></a>
 					</div>
 					<div class="right group_list">
 						<div class="module1_2 box">

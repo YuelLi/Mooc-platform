@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% block title %} Course details - Gmooc {% endblock %}
+{% block nav %}
+<nav>
+    <div class="nav">
+        <div class="wp">
+            <ul>
+                <li >
+                    <a href="{% url 'index' %}">Home Page</a>
+                </li>
+                <li class="active">
+                    <a href="{% url 'course-list' %}">
+                        Courses<img class="hot" src="/static/images/nav_hot.png">
+                    </a>
+                </li>
+                <li >
+                    <a href="">Instructors</a>
+                </li>
+                <li>
+                    <a href="{% url 'org_list' %}">Organizations</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+{% block custom_crumbs %}
+<!--crumbs start-->
+<section>
+	<div class="wp">
+		<div class="crumbs">
+			<ul>
+				<li><a href="{% url 'index' %}">Home Page</a> > </li>
+                <li><a href="{% url 'course-list' %}">Courses</a> > </li>
+				<li>Details</li>
+			</ul>
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section>
+	<div class="wp">
+		<div class="groupPurchase_detail detail">
+			<div class="toppro">
+				<div class="left">
+					<div class="picbox">
+						<div class="tb-booth tb-pic">
+							<img width="440" height="445" src="/media/{{ course.image }}" class="jqzoom" />
+						</div>
+
+					</div>
+					<div class="des">
+						<h1 title="">{{ course.name }}</h1>
+						<span class="key">{{ course.desc }}</span>
+						<div class="prize">
+							<span class="fl">Difficulty: <i class="key">{{ course.get_difficulty_display }}</i></span>
+							<span class="fr">Enrolled: {{ course.student_num }}</span>
+						</div>
+						<ul class="parameter">
+							<li><span class="pram word3">Time : </span><span>{{ course.study_time }}</span></li>
+                            <li><span class="pram word3">Lessons : </span><span>{{ course.lesson_set.count }}</span></li>
+                            <li><span class="pram word3">Category : </span><span title="">{{ course.category }}</span></li>
+						</ul>
+						<div class="btns">
+							<div class="btn colectgroupbtn"  id="jsLeftBtn">
+                                  {% if is_course_favored %} Favored {% else %} Favor {% endif %}
+                            </div>
+                                <a style="color: white" href="{% url 'course-info' course.id %}"><div class="buy btn">Start</div></a>
+						    </div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="head">
+						<h1>Organization</h1>
+						<p></p>
+					</div>
+					<div class="pic">
+                        <a href="{% url 'org_home' course.course_org.id %}">
+                            <img width="150" height="80" src="/media/{{ course.course_org.image }}"/>
+                        </a>
+                    </div>
+					<a href="{% url 'org_home' course.course_org.id %}">
+                        <h2 class="center" title="">{{ course.course_org.name }}</h2>
+                    </a>
+					<div class="btn  notlogin
+					     "data-favid="14" id="jsRightBtn">
+                         {% if is_org_favored %} Favored {% else %} Favor {% endif %}
+                    </div>
+					<div class="clear">
+						<ul>
+                            <li>
+                                <span>Courses ：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {{ course.course_org.course_num }}</span>
+                            </li>
+                            <li>
+                                <span>Instructors ：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ course.course_org.get_instr_num }}</span>
+                            </li>
+							<li>Area:&nbsp;&nbsp;{{ course.course_org.city }}</li>
+							<li>Verified:
+								    &nbsp;&nbsp;<img title="", src="/static/images/gold.png"/>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="wp">
+		<div class="list groupPurchase_detail_pro">
+			<div class="left layout">
+				<div class="head">
+					<ul class="tab_header">
+						<li class="active">Details</li>
+					</ul>
+				</div>
+				<div class="tab_cont tab_cont1">
+                    {{ course.detail }}
+				</div>
+				<div class="tab_cont tab_cont2" >
+					<div class="comment">
+						<div class="comenlist">
+
+	                    </div>
+					</div>
+				</div>
+			</div>
+			<div class="right layout">
+				<div class="head">Related Courses</div>
+                <div class="group_recommend">
+                        {% for course in related_courses %}
+                        <dl>
+                            <dt>
+                                <a target="_blank" href="">
+                                    <img width="240" height="220" src="/media/{{ course.image }}"/>
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" href=""><h2> {{ course.name }}</h2></a>
+                                <span class="fl">Time: <i class="key">{{ course.study_time }}</i></span>
+                            </dd>
+                        </dl>
+                        {% endfor %}
+
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+{% block custom_js %}
+<script type="text/javascript">
+function add_fav(current_elem, fav_id, fav_type){
+    $.ajax({
+        cache: false,
+        type: "POST",
+        url:"{% url 'add_fav' %}",
+        data:{'fav_id':fav_id, 'fav_type':fav_type},
+        async: true,
+        beforeSend:function(xhr, settings){
+            xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+        },
+        success: function(data) {
+            if(data.status == 'fail'){
+                if(data.msg == 'Not logged in'){
+                    window.location.href="{% url 'login' %}";
+                }else{
+                    alert(data.msg)
+                }
+
+            }else if(data.status == 'success'){
+                current_elem.text(data.msg)
+            }
+        },
+    });
+}
+$(document).ready(function() {
+    $('#jsLeftBtn').on('click', function () {
+        add_fav($(this), {{ course.id }}, 1);
+    });
+});
+
+$(document).ready(function() {
+	$('#jsRightBtn').on('click', function(){
+		add_fav($(this), {{ course.course_org.id }}, 2);
+	});
+});
+
+</script>
+{% endblock %}

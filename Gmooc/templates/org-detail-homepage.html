@@ -10,9 +10,9 @@
         <div class="brief group_list">
             {% for course in all_courses %}
                 <div class="module1_5 box">
-                    <a href="course-detail.html"><img width="214" src="/media/{{ course.image }}"/></a>
+                    <a href="{% url 'course-detail' course.id %}"><img width="214" src="/media/{{ course.image }}"/></a>
                     <div class="des">
-                        <a href="course-detail.html"><h2>{{ course.name }}</h2></a>
+                        <a href="{% url 'course-detail' course.id %}"><h2>{{ course.name }}</h2></a>
                         <span class="fl">Hours:<i class="key">{{ course.study_time }}</i></span>
                         <span class="fr">Students: {{ course.student_num }}</span>
                     </div>
@@ -42,11 +42,11 @@
                 <div class="right">
                     <div class="top">
                         <div class="fl">
-                            <a href=""><h1>java开发教程</h1></a>
-                            <span>发表于：2015-10-12</span>
+                            <a href=""><h1>Course Name</h1></a>
+                            <span>Published on: 2015-10-12</span>
                         </div>
                     </div>
-                    <div class="middle" style="border-bottom:0;">课程介绍</div>
+                    <div class="middle" style="border-bottom:0;">Description</div>
                 </div>
             </div>
         </div>

@@ -34,6 +34,9 @@ class CourseOrg(models.Model):
     def __str__(self):
         return self.name
 
+    def get_instr_num(self):
+        return self.instructor_set.all().count()
+
 class Instructor(models.Model):
     org =models.ForeignKey(CourseOrg,verbose_name="Organization at", on_delete=models.CASCADE)
     name=models.CharField(max_length=50, verbose_name="Instructor Name")
