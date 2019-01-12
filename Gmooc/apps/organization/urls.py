@@ -10,4 +10,5 @@ urlpatterns = [
     path('instructors/<org_id>/', OrgInstrView.as_view(), name="org_instr"),
     path('description/<org_id>/', OrgDescView.as_view(), name="org_desc"),
     path('favor/', AddFavorView.as_view(), name="add_fav"),
+
 ]

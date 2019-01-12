@@ -3,8 +3,7 @@ from django.views.generic import View
 from django.http import HttpResponse
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 
-from .models import CourseOrg
-from .models import CityDict
+from .models import CourseOrg, CityDict, Instructor
 from .forms import UserConsultForm
 from course.models import Course
 from operation.models import UserFavorite
@@ -160,4 +159,38 @@ class AddFavorView(View):
                 return HttpResponse('{"status":"fail","msg":"Favor error"}', content_type='application/json')
 
 
+class InstructorListView(View):
+    def get(self,request):
+        all_instructors= Instructor.objects.all()
+        instr_count =all_instructors.count()
+        ranked_instructors=all_instructors.order_by("-click_num")[:5]
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
 
+        instr_paginator = Paginator(all_instructors, 3, request=request)
+        instructors = instr_paginator.page(page)
+        return render(request, 'instructor-list.html',{
+            'all_instructors': instructors,
+            'ranked_instructors': ranked_instructors,
+            'instr_count': instr_count,
+        })
+
+class InstructorDetailView(View):
+    def get(self, request, instr_id):
+        instructor = Instructor.objects.get(id=int(instr_id))
+        all_courses = Course.objects.filter(instructor=instructor)
+        ranked_instructors = Instructor.objects.order_by("-click_num")[:5]
+
+        is_org_favored=False
+        if request.user.is_authenticated:
+            if UserFavorite.objects.filter(user=request.user, fav_id=instructor.org.id, fav_type=2):
+                is_org_favored=True
+
+        return render(request, 'instructor-detail.html',{
+            'instructor': instructor,
+            'all_courses': all_courses,
+            'ranked_instructors': ranked_instructors,
+            'is_org_favored': is_org_favored,
+        })
