@@ -1,6 +1,9 @@
 # Mooc-platform
 Django(2.1.2), MySQL(8.0) <br>
 A project for self-study <br>
+
+[An example](http://yuli1997.pythonanywhere.com/) of this project
+
 <br>
 ## Get Started:
 * Create virtual environment via venv:
