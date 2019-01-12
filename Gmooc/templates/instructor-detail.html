@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+{% block title %} Instructor - GMooc {% endblock %}
+{% block custom_crumbs %}
+<section>
+    <div class="wp">
+        <ul  class="crumbs">
+            <li><a href="{% url 'index' %}">Home Page</a> > </li>
+            <li><a href="{% url 'index' %}">Instructors</a> > </li>
+            <li>Details</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
+
+{% block nav %}
+<nav>
+    <div class="nav">
+        <div class="wp">
+            <ul>
+                <li ><a href="{% url 'index' %}">Home Page</a></li>
+                <li >
+                    <a href="{% url 'course-list' %}">
+                        Courses<img class="hot" src="/static/images/nav_hot.png">
+                    </a>
+                </li>
+                <li class="active" >
+                    <a href="">Instructors</a>
+                </li>
+                <li >
+                    <a href="{% url 'org_list' %}">Organizations</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<section>
+	<div class="wp butler-detail-box butler-diaryd-box clearfix">
+        <div class="fl list">
+            <div class="butler_detail_list clearfix">
+                <div class="brief">
+                    <dl class="des">
+                        <dt>
+                            <div class="picpic">
+                                <img width="100" height="100" src="/media/{{ instructor.image }}"/>
+                            </div>
+                        </dt>
+                        <dd>
+                            <a href="">
+                                <h1>bobby<span class="key picbig">Verified Instructor</span></h1>
+                            </a>
+                            <ul class="cont">
+                                <li>Working years:<span>{{ instructor }}</span></li>
+                                <li>Company: <span>{{ instructor.company }}</span></li>
+                                <li>Position: <span> {{ instructor.position }}&nbsp;</span></li>
+                                <li>Feature: <span> {{ instructor.feature }}</span></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="butler_detail_cont clearfix">
+                <div class="left layout">
+				<div class="head">
+					<ul class="tab_header">
+						<li class="active">All Courses</li>
+					</ul>
+				</div>
+                    <div class="companycenter">
+                        <div class="group_list brief">
+                            {% for course in all_courses %}
+                            <div class="module1_5 box">
+                                <a href="{% url 'course-detail' course.id %}">
+                                    <img width="214" height="190" class="scrollLoading" src="/media/{{ course.image }}"/>
+                                </a>
+                                <div class="des">
+                                    <a href="{% url 'course-detail' course.id %}"><h2>{{ course.name }}</h2></a>
+                                    <span class="fl">Time: <i class="key">{{ course.study_time }}</i></span>
+                                    <span class="fr">Students: {{ course.student_num }}</span>
+                                </div>
+                                <div class="bottom">
+                                    <span class="fl">{{ course.course_org.name }}</span>
+                                    <span class="star fr  notlogin" data-favid="15">{{ course.favor_num }}</span>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                <!--<div class="pageturn">-->
+                    <!--<ul class="pagelist">-->
+                        <!--<li class="active"><a href="?page=1">1</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            </div>
+            </div>
+        </div>
+        <div class="fr list">
+             <div class="butler_detail_list">
+                <div class="right butler-company-box">
+                <div class="head">
+                    <h1>{{ instructor.org.name }}</h1>
+                    <p></p>
+                </div>
+                <div class="pic">
+                    <a href="{% url 'org_home' instructor.org.id %}">
+                        <img width="150" height="80" src="/media/{{ instructor.org.image }}"/>
+                    </a>
+                </div>
+                <a href="org-detail-homepage.html">
+                    <h2 class="center">{{ instructor.org.name }}</h2>
+                </a>
+                <p class="center tell">{{ instructor.org.address }}</p>
+                <a class="btn" id="jsRightBtn">{% if is_org_favored %} Favored {% else %} Favor {% endif %}</a>
+            </div>
+            </div>
+            <div class="butler_detail_cont">
+                <div class="butler_list_box">
+                    <div class="right layout">
+                        <div class="head">Rankings</div>
+                        {% for instructor in ranked_instructors %}
+                        <dl class="des">
+                <span class="num fl">{{ forloop.counter }}</span>
+                <a href="{% url 'instr-detail' instructor.id %}">
+                    <dt>
+                        <img width="50" height="50" class="scrollLoading"  src="/media/{{ instructor.image }}"/>
+                    </dt>
+                </a>
+                <dd>
+                    <a href="{% url 'instr-detail' instructor.id %}">
+                        <h1>{{ instructor.name }}</h1>
+                    </a>
+                    <p>Years:<span>{{ instructor.work_year }}</span></p>
+                </dd>
+            </dl>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</section>
+{% endblock %}
+
+
+{% block custom_js %}
+<script type="text/javascript">
+
+function add_fav(current_elem, fav_id, fav_type){
+    $.ajax({
+        cache: false,
+        type: "POST",
+        url:"{% url 'add_fav' %}",
+        data:{'fav_id':fav_id, 'fav_type':fav_type},
+        async: true,
+        beforeSend:function(xhr, settings){
+            xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+        },
+        success: function(data) {
+            if(data.status == 'fail'){
+                if(data.msg == 'Notloggedin'){
+                    window.location.href="{% url 'login' %}";
+                }else{
+                    alert(data.msg)
+                }
+
+            }else if(data.status == 'success'){
+                current_elem.text(data.msg)
+            }
+        },
+    });
+}
+$(document).ready(function() {
+    $('#jsRightBtn').on('click', function () {
+        add_fav($(this), 1, 2);
+    });
+});
+
+
+</script>
+{% endblock %}
