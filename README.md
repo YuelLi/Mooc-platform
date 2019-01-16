@@ -18,7 +18,7 @@ A project for self-study <br>
 * `python manage.py createsuperuser`
 * Modify data on xadmin(localhost for example):
 * http://localhost:8000/xadmin
-*
+
 ## Logs:
 * 10/29:
 <br>Created virtual enviroment django_env and Django dev enviroment on Pycharm.
@@ -42,3 +42,7 @@ A project for self-study <br>
 <br> Finished email verification
 * 12/15:
 <br> Reconfigured the set up
+.....
+* 1/7:
+<br> Almost finished the project, host on pythonanywhere.com
+<br> 
