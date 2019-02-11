@@ -16,6 +16,8 @@ A project for self-study <br>
 * `python manage.py migrate`
 * To use xamdin, you should create superuser:
 * `python manage.py createsuperuser`
+* To run server:
+* `python manage.py runserver`
 * Modify data on xadmin(localhost for example):
 * http://localhost:8000/xadmin
 
